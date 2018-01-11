@@ -1,0 +1,33 @@
+https://www.tensorflow.org/install/install_linux
+
+installed for anaconda
+
+
+# To activate this environment, use:
+# > source activate tensorflow
+#
+# To deactivate an active environment, use:
+# > source deactivate
+
+
+jupyter-notebook
+
+anaconda-navigator
+
+
+
+
+conda install -c conda-forge tensorflow
+
+
+
+conda install ipykernel --name tensorflow
+
+
+# to tez nie dziala czemus
+python -m ipykernel install --user --name tensorflow --display-name "Python (tensorflow)"
+
+
+
+to nie dziala:
+https://stackoverflow.com/questions/37061089/trouble-with-tensorflow-in-jupyter-notebook
