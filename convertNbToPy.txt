@@ -1,0 +1,3 @@
+https://ipython.org/ipython-doc/1/interactive/nbconvert.html
+
+ipython nbconvert someFile.ipynb --to python
