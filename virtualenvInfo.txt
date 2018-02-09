@@ -1,0 +1,29 @@
+http://docs.python-guide.org/en/latest/dev/virtualenvs/
+
+INSTALL
+
+python -m pip install virtualenv
+
+or 
+
+pip3 install virtualenv
+
+create dir my_proj_folder and then cd my_proj_folder
+
+SETTING - create dir with given name as virtualEnvironment
+
+virtualenv --system-site-packages -p python3 targetDirectory # for Python 3.n
+
+(or simpler for default)
+
+virtualenv my_proj
+
+
+
+ACTIVATE:
+
+source ~/targetDir/bin/activate
+
+
+DEACTIVATE:
+deactivate
