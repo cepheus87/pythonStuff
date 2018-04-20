@@ -1,0 +1,5 @@
+to run python server with html page
+
+- go into dir with the page
+- python3 -m http.server
+- it will start server at http://localhost:8000/
