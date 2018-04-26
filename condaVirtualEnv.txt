@@ -24,3 +24,7 @@ source activate py27
 
 source deactivate
 
+
+# use pip in ipykernell
+import pip
+pip.main(["install","package_name"])
