@@ -1,0 +1,14 @@
+https://jakevdp.github.io/PythonDataScienceHandbook/03.12-performance-eval-and-query.html
+
+pandas eval() and query()
+
+eval() works for data frames (pandas.eval()) and for columns (DataFrame.eval())
+
+eval for calculations
+query for conditions
+
+Performance:
+
+It improves memory usage - no temporary df need to be created.
+
+!!! Time performance are more or less the same for the same conditional BUT for small arrays are even worse !!!
