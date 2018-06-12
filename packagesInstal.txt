@@ -1,3 +1,9 @@
 python3.6 -m pip install [Package]
 
+sudo pip install [package_name] --upgrade
+
 conda install -c r rpy2
+
+# use pip in ipykernell
+import pip
+pip.main(["install","package_name"])
