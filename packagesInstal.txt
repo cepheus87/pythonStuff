@@ -7,3 +7,10 @@ conda install -c r rpy2
 # use pip in ipykernell
 import pip
 pip.main(["install","package_name"])
+
+
+
+sprawdzenie uzywanych paczek
+trzeba zainstalowac pipreqs
+a pozniej
+pipreqs folder
