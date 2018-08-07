@@ -1,0 +1,16 @@
+UBUNTU 16.04
+
+tf with gpu 
+
+https://www.tensorflow.org/install/install_linux
+
+
+
+cuda install:
+
+https://yangcha.github.io/CUDA90/
+
+libcudnn7 and libnccl not needed to install
+
+
+If you want to run it in jupyter check info from file jupyter_with_venvs.txt
