@@ -19,6 +19,7 @@ sudo apt-get install cuda=9.0.176-1
 
 downloaded from nvidia page
 https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#download
+(alternative: wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/AND_HERE_FILE_NAME_FROM_BELOW)
 
 sudo dpkg -i libcudnn7_7.2.1.38-1+cuda9.0_amd64.deb
 sudo dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.0_amd64.deb
@@ -37,7 +38,7 @@ https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#download
 
 TF:
 https://www.tensorflow.org/install/install_linux
-
+(version 1.9.0)
 
 
 If you want to run it in jupyter check info from file jupyter_with_venvs.txt
