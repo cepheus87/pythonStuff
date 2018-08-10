@@ -1,0 +1,43 @@
+Ubuntu 16.04
+
+CUDA:
+
+If you have previous versions (optional):
+
+sudo apt-get purge cuda
+sudo apt-get purge libcudnn6
+sudo apt-get purge libcudnn6-dev
+
+Install:
+
+To download:
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+
+sudo dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda=9.0.176-1
+
+downloaded from nvidia page
+https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#download
+
+sudo dpkg -i libcudnn7_7.2.1.38-1+cuda9.0_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.0_amd64.deb
+sudo dpkg -i libcudnn7-doc_7.2.1.38-1+cuda9.0_amd64.deb
+
+
+added to .bashrc (do not know if needed)
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
+helpfull links:
+https://stackoverflow.com/questions/51112126/gpu-sync-failed-while-using-tensorflow
+https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#download
+(check verification)
+
+TF:
+https://www.tensorflow.org/install/install_linux
+
+
+
+If you want to run it in jupyter check info from file jupyter_with_venvs.txt
