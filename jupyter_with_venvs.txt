@@ -6,6 +6,7 @@ Create and activate virtual environment and then
 
 ipython kernell install --user --name=ProjectName
 
+(python -m ipykernel install --user --name kernelName --display-name "Name displayed in jupyter"
 
 To make sure that "right" python is used:
 Search for jupyter kernels:

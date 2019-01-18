@@ -1,0 +1,72 @@
+https://www.tensorflow.org/install/pip
+
+Create a virtual environment:
+
+virtualenv -p /usr/bin/python3.6 tf_gpu_p36/
+
+source tf_gpu_p36/bin/activate
+
+python -m pip install tensorflow-gpu
+
+# python -m pip install --upgrade tensorflow-gpu
+
+
+instalation test:
+python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
+
+
+venv in jupyter
+
+(python -m) pip install ipykernel
+
+python -m ipykernel install --user --name tf_gpu_p36 --display-name "tf_gpu_p36"
+
+To make sure that "right" python is used:
+Search for jupyter kernels:
+
+jupyter kernelspec list
+
+Then check in kernel.json (in your venv kernel path) path to python which is used in given kernel. Sometimes it must be changed for ".../your_venv/bin/python"
+
+
+
+to test GPU usage:
+https://www.tensorflow.org/guide/using_gpu
+
+python ~/tensorflow/gpu_test.py
+
+
+If have packages requirements in file:
+
+python -m pip install -r filename.txt
+
+
+
+Instruction about GPU installation at UBUNTU 16.04
+
+If you have previous versions (optional):
+
+sudo apt-get purge cuda
+sudo apt-get purge libcudnn6
+sudo apt-get purge libcudnn6-dev
+
+Install:
+
+To download:
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+
+sudo dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda=9.0.176-1
+
+downloaded from nvidia page
+https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#download
+
+sudo dpkg -i libcudnn7_7.2.1.38-1+cuda9.0_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.0_amd64.deb
+sudo dpkg -i libcudnn7-doc_7.2.1.38-1+cuda9.0_amd64.deb
+
+
+added to .bashrc (do not know if needed)
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
