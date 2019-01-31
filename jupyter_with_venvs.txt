@@ -14,3 +14,18 @@ Search for jupyter kernels:
 jupyter kernelspec list
 
 Then check in kernel.json (in your venv kernel path) path to python which is used in given kernel. Sometimes it must be changed for ".../your_venv/bin/python"
+
+
+
+# use pip in ipykernell
+import pip
+pip.main(["install","package_name"])
+
+(not work with pip from 10.0)
+
+
+!{sys.executable} -m pip install numpy
+
+! - jupyter treats cell as shell command
+
+https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/
