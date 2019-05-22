@@ -17,6 +17,7 @@ class ParallelObject:
 
     def run2(self, c):
         print(c)
+        return c["deviceId"]
 
 
 if __name__ == "__main__":
@@ -38,14 +39,16 @@ if __name__ == "__main__":
     conf = [(e,) for e in todo_config]
 
     print(conf)
-    
+
     try:
         with Pool(num_processes) as p:
             p.starmap(obj.run, [(5,), (6,)])
-            p.starmap(obj.run2, conf)
+            out = p.starmap(obj.run2, conf)
     except Exception as e:
         print(e)
 
+
+    print(out)
 
 
 
