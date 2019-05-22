@@ -14,15 +14,35 @@ class ParallelObject:
         self._c = c
         print(self._a, self._b,  self._c)
         print(self._a * self._b * self._c)
-        
+
+    def run2(self, c):
+        print(c)
+
 
 if __name__ == "__main__":
 
     num_processes = 4
     obj = ParallelObject(4)
+
+    todo_config = [
+        {
+            "deviceId": "123",
+            "refDeviceId": "456",
+        },
+        {
+            "deviceId": "123",
+            "refDeviceId": "456",
+        },
+        ]
+
+    conf = [(e,) for e in todo_config]
+
+    print(conf)
+    
     try:
         with Pool(num_processes) as p:
             p.starmap(obj.run, [(5,), (6,)])
+            p.starmap(obj.run2, conf)
     except Exception as e:
         print(e)
 
