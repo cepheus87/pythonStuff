@@ -1,0 +1,10 @@
+coverage in python:
+
+pip install coverage
+
+to combine with pytest:
+
+pip install pytest-cov:
+
+pytest --cov=TestedModuleName tests/ (--cov-report=html - report to html version with marked lines)
+
