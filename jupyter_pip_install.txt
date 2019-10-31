@@ -1,0 +1,11 @@
+to install jupyter:
+
+python -m pip install jupyter
+
+pip install jupyterlab
+
+sudo apt install nodejs
+
+export PATH=/home/USER/.local/bin/:$PATH
+
+ ~/.local/bin/jupyter-notebook
