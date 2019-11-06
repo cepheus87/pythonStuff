@@ -1,0 +1,27 @@
+min_app
+
+export FLASK_APP=min_app.py
+
+
+
+flask run
+
+or
+python -m flask run
+
+_____________
+
+min_app2
+
+python min_app2.py
+
+_________
+
+On debug mode server will reload itself on code changes, and it will also provide you with a helpful debugger if things go wrong
+
+export FLASK_ENV=development   # not exit server
+alternative:
+export FLASK_DEBUG=1
+
+or 
+app.run(debug=True)
