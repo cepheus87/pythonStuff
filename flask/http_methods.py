@@ -27,6 +27,7 @@ def do_the_login():
 
 @app.route("/query_example")
 def query_example():
+    #?key=value
     #/query_example?language=Python&framework=Flask
     language = request.args.get("language")  # like calling dict
     framework = request.args["framework"]  # must be like calling dict
@@ -36,7 +37,7 @@ def query_example():
 @app.route("/form_example", methods=["GET", "POST"])
 def form_example():
     if request.method == 'POST':
-        lang = request.form.get("language")
+        lang = request.form.get("language", "some_default_value")
         return f"submitted {lang}"
     else:
         return ''' <form method="POST">
@@ -44,6 +45,13 @@ def form_example():
         <input type="submit">
         </form>
         '''
+
+
+@app.route("/json_example", methods=["POST"])  # only available as response
+def json_example():
+    req_data = request.get_json()
+    answ = f'{req_data["aaa"]}, {req_data["ccc"]["ddd"]}, {req_data["fff"][1]}'
+    return f"{answ}"
 
 
 if __name__ == "__main__":
