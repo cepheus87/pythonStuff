@@ -1,3 +1,11 @@
+additional info:
+https://flask.palletsprojects.com/en/1.1.x/quickstart/#deploying-to-a-web-server
+https://flask.palletsprojects.com/en/1.1.x/tutorial/factory/
+https://medium.com/@nikovrdoljak/deploy-your-flask-app-on-azure-in-3-easy-steps-b2fe388a589e
+
+
+RUNNING:
+
 min_app
 
 export FLASK_APP=min_app.py
