@@ -1,0 +1,24 @@
+requirements:
+setuptools
+wheel
+
+python3.6 setup.py sdist bdist_wheel
+
+It creates:
+tar.gz - source archive
+whl - built distribution
+
+
+to install:
+pip install some-package.whl
+
+
+tar.gz is the source code of the library. You should unpack it, and you will find a setup.py script inside. Run:
+
+`python setup.py install --prefix=/share/pythonLib`
+
+This will create:
+
+`/share/pythonLib/lib/python2.7/site-packages/`
+
+In your scripts append that path to sys.path and everything should work fine.
