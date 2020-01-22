@@ -2,6 +2,8 @@ http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 INSTALL
 
+OLD VERSION
+
 python -m pip install virtualenv
 
 or 
@@ -19,6 +21,9 @@ virtualenv -p /usr/bin/python3 targetDirectory # for Python 3.n
 virtualenv my_proj
 
 
+NEW VERSION
+(virtualenv and venv as a module of python are different apckages)
+
 
 Version including virtualenv with symbolic linking to packages like python3-dev
 
@@ -26,6 +31,10 @@ sudo apt-get install -y python3-venv
 
 python3.6 -m venv venvName(targetDir)
 
+
+if error like (Error: Command '['/home/tomasz/soltec/soltec-analysis-api/aaa/bin/python3.6', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.)
+
+then python3.6 -m venv --without-pip test
 
 ACTIVATE:
 
