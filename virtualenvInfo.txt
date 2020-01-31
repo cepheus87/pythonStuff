@@ -36,6 +36,11 @@ if error like (Error: Command '['/home/tomasz/soltec/soltec-analysis-api/aaa/bin
 
 then python3.6 -m venv --without-pip test
 
+to install pip in given venv:
+
+curl https://bootstrap.pypa.io/get-pip.py | python
+
+
 ACTIVATE:
 
 source ~/targetDir/bin/activate
