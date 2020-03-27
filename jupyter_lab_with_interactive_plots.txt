@@ -1,0 +1,25 @@
+ubuntu 18.04
+
+https://stackoverflow.com/questions/50149562/jupyterlab-interactive-plot
+
+needed node > 8.16
+https://joshtronic.com/2018/05/08/how-to-install-nodejs-10-on-ubuntu-1804-lts/
+
+
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt install nodejs
+
+check if npm installed (npm --version) if not sudo apt install npm
+
+
+
+pip install ipympl
+pip install --upgrade jupyterlab
+export JUPYTERLAB_DIR="$HOME/.local/share/jupyter/lab"
+
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install jupyter-matplotlib
+
+jupyter nbextension enable --py widgetsnbextension
+
+%matplotlib widget
