@@ -48,3 +48,13 @@ source ~/targetDir/bin/activate
 
 DEACTIVATE:
 deactivate
+
+
+to duplicate venv:
+
+pip freeze > requirements.txt
+
+and then create new one
+
+pip install -r requirements.txt
+
