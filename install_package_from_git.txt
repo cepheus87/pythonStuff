@@ -1,0 +1,4 @@
+to upgrade package from git branch
+
+pip install --upgrade git+https://github.com/pyqtgraph/pyqtgraph@develop
+ 
