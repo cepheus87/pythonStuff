@@ -1,0 +1,33 @@
+package: memory_profiler
+https://pypi.org/project/memory-profiler/
+
+in code
+
+import:
+from memory_profiler import  profile
+
+decorator to function:
+@profile
+
+
+to create plots:
+
+mprof run python code.py
+
+to show plot:
+
+mprof plot
+
+or
+
+mprof plot 'name'
+
+
+
+
+mprof run: running an executable, recording memory usage
+mprof plot: plotting one the recorded memory usage (by default, the last one)
+mprof list: listing all recorded memory usage files in a user-friendly way.
+mprof clean: removing all recorded memory usage files.
+mprof rm: removing specific recorded memory usage files
+
