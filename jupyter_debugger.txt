@@ -1,0 +1,34 @@
+simple debugger (console like)
+
+%debug and the iPython debugger
+
+The easiest way to debug a Jupyter notebook is to use the %debug magic command. Whenever you encounter an error or exception, just open a new notebook cell, type %debug and run the cell. This will open a command line where you can test your code and inspect all variables right up to the line that threw the error.
+Type “n” and hit Enter to run the next line of code (The → arrow shows you the current position). Use “c” to continue until the next breakpoint. “q” quits the debugger and code execution.
+
+or set breakpoint in code
+from IPython.core.debugger import set_trace
+
+code ...
+set_trace()
+code ...
+
+
+window debbuger (works only with jupyter-notebook) 2021-03
+
+https://medium.com/codait/the-visual-python-debugger-for-jupyter-notebooks-youve-always-wanted-761713babc62
+
+pip install pixiedust
+
+import pixiedust
+
+run in cell:
+
+%%pixie_debugger
+import random
+def find_max (values):
+    max = 0
+    for val in values:
+        if val > max:
+            max = val
+    return max
+find_max(random.sample(range(100), 10))
