@@ -12,3 +12,9 @@ sudo apt install nodejs
 export PATH=/home/$USER/.local/bin/:$PATH
 
  ~/.local/bin/jupyter-notebook
+
+
+LUB
+
+import sys
+!{sys.executable} -m pip install 

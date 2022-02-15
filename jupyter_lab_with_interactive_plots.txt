@@ -7,6 +7,7 @@ https://joshtronic.com/2018/05/08/how-to-install-nodejs-10-on-ubuntu-1804-lts/
 
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs
 
 check if npm installed (npm --version) if not sudo apt install npm
@@ -23,3 +24,19 @@ jupyter labextension install jupyter-matplotlib
 jupyter nbextension enable --py widgetsnbextension
 
 %matplotlib widget
+
+
+ubuntu 20.04
+
+
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm (optional)
+
+python3.8 -m pip install ipympl (for each venv)
+
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
+jupyter lab build

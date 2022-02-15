@@ -2,7 +2,7 @@ http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 INSTALL
 
-OLD VERSION
+OLD VERSION AND NEW (works for py 3.8)
 
 python -m pip install virtualenv
 
