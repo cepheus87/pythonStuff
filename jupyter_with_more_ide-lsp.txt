@@ -1,0 +1,5 @@
+https://github.com/jupyter-lsp/jupyterlab-lsp#installation
+
+pip install ('jupyterlab>=3.0.0,<4.0.0a0') jupyterlab-lsp
+
+pip install 'python-lsp-server[all]'

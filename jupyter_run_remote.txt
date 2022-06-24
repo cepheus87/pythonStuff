@@ -33,3 +33,68 @@ jupyter-lab --ip 0.0.0.0 --port 8888 --no-browser
 
 on your local machine
 http://<your-routers-public-ip>:8888  (without s)
+
+
+
+IN DOCKER
+
+odpalanie:
+
+
+
+najpierw sugeruję odpalić program screen
+
+np.
+
+screen -S moj_wolny_proces
+
+otwiera się nowa konsola i tam:
+
+ssh danrud@192.168.34.189'
+
+passw: fi2
+
+
+
+cd Desktop/projects/machine-states-ml
+
+
+
+mój dockerfile:
+
+
+
+FROM python:3.8
+COPY . /machine-states-ml
+
+RUN pip install --upgrade pip \
+pip install -r /machine-states-ml/requirements.txt
+WORKDIR /machine-states-ml
+CMD ["bash"]
+
+
+
+budowanie:
+
+docker build -t jupter_remote_machine_states_ml .
+
+
+
+
+docker run --gpus all --network host jupter_remote_machine_states_ml
+
+i wew kontenera:
+
+jupyter notebook -i 0.0.0.0 --no-browser --allow-root --port=8084
+
+
+
+i na koniec na swoim laptopie:
+
+ssh -L 8084:localhost:8084 danrud@192.168.34.189
+
+
+
+z tym że wszystkie zmiany w kodzie istnieją tylko w kontenerze, więc przed jego wyłączeniem trzeba sobie skopiować na zewnątrz
+
+docker cp fcb759ece472:/machine-states-ml/notebooks/ ./notebooks_data

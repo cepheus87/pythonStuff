@@ -70,3 +70,20 @@ sudo dpkg -i libcudnn7-doc_7.2.1.38-1+cuda9.0_amd64.deb
 added to .bashrc (do not know if needed)
 export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
+
+
+
+Ubuntu 20.04, python 3.8
+
+sudo apt install python3-dev python3-pip python3-venv
+
+
+Failed to build termcolor
+
+python -m pip instal --upgrade pip
+python -m pip install --upgrade wheel
+python -m pip install termcolor
+
+
