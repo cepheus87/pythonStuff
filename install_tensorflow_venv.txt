@@ -77,13 +77,67 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 
 Ubuntu 20.04, python 3.8
 
+to install tensorflow
+
 sudo apt install python3-dev python3-pip python3-venv
 
 
-Failed to build termcolor
+for GPU
 
-python -m pip instal --upgrade pip
+check if drivers are installed
+
+https://askubuntu.com/questions/68028/how-do-i-check-if-ubuntu-is-using-my-nvidia-graphics-card
+
+shell:
+lspci -vnnn | perl -lne 'print if /^\d+\:.+(\[\S+\:\S+\])/' | grep VGA
+
+nvidia-detector 
+
+https://towardsdatascience.com/installing-multiple-cuda-cudnn-versions-in-ubuntu-fcb6aa5194e2
+
+install CUDA
+
+https://www.how2shout.com/linux/how-to-install-cuda-on-ubuntu-20-04-lts-linux/
+
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/3bf863cc.pub
+
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+
+sudo apt-get update
+
+sudo apt install cuda
+
+echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc
+
+nvcc --version
+
+
+
+Install cuDNN
+
+https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html
+
+download cudnn (login needed)
+
+
+Install tensorflow
+
+# Failed to build termcolor
+
+python -m pip install --upgrade pip
 python -m pip install --upgrade wheel
 python -m pip install termcolor
 
+python -m pip install tensorflow
 
+
+testing:
+
+import tensorflow as tf
+tf.test.gpu_device_name()
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+tf.config.list_physical_devices('GPU')
