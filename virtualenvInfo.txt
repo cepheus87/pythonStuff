@@ -4,11 +4,9 @@ INSTALL
 
 OLD VERSION AND NEW (works for py 3.8)
 
+virtualenv - works for many python distribution installed
+
 python -m pip install virtualenv
-
-or 
-
-pip3 install virtualenv
 
 create dir my_proj_folder and then cd my_proj_folder
 
@@ -22,10 +20,13 @@ virtualenv my_proj
 
 
 NEW VERSION
-(virtualenv and venv as a module of python are different apckages)
+(virtualenv and venv as a module of python are different packages)
 
+venv is included and accepted by "Python", but it handels creation of only default ("base") distribution. E.g. base is 3.8 instaliing python3-venv will install it to py3.8. After installing additionaly py3.9, you can not use venv with py3.9.
+venv is better but not handles many distributions
+https://www.reddit.com/r/learnpython/comments/4hsudz/pyvenv_vs_virtualenv/
 
-Version including virtualenv with symbolic linking to packages like python3-dev
+venv includes with symbolic linking to packages like python3-dev
 
 sudo apt-get install -y python3-venv
 
