@@ -1,0 +1,4 @@
+python3 << EOF
+import os
+print(os.listdir())
+EOF

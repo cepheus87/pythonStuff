@@ -1,0 +1,5 @@
+https://forums.linuxmint.com/viewtopic.php?t=281922
+
+https://linuxconfig.org/how-to-check-nvidia-driver-version-on-your-linux-system
+
+https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux

@@ -1,0 +1,5 @@
+// w folderze z plikiem setup.py
+export CI_COMMIT_TAG=cokolwiek  - rho specific
+pip install . 
+// (albo jak chcesz edytować bez konieczności ponownej instalacji to pip install -e .)
+// teraz już powinno działać
