@@ -2,3 +2,5 @@ python3 << EOF
 import os
 print(os.listdir())
 EOF
+
+python3 -c 'import sys; print("aaa")'
