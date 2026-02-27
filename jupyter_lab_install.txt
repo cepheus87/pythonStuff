@@ -1,0 +1,37 @@
+# Installing in a separate venv
+
+python -m pip install jupyterlab
+
+it creates executable files in the venv
+
+added 
+
+export PATH="$HOME/$USER/.local/bin:$PATH"
+
+symlink/copy from venv to .local/bin (if old or executable not created) 
+
+ln -s /path/to/source /path/to/symlink
+
+I DID NOT finished linking !!
+
+
+# INTERACTIVE PLOTS (jupyterlab 3.0+)
+
+in jupyterlab's venv:
+
+pip install --upgrade ipympl 
+
+Decorate the cell containing plotting code with the header:
+
+%matplotlib widget
+
+
+plt.show() - for inline plots after using interactive (%matplotlib widget)
+
+
+
+
+# CODE AUTO COMPLETION
+
+python -m pip install jupyterlab-lsp
+python -m pip install python-lsp-server
