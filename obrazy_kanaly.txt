@@ -1,0 +1,7 @@
+
+| Biblioteka | Format wymiarów | Kolejność kanałów kolorów | Typ danych (zazwyczaj) |
+| :--- | :--- | :--- | :--- |
+| **Pillow (PIL)** | `(Szerokość, Wysokość)` lub `(W, H)` | **RGB** | Obiekt klasy `Image` |
+| **OpenCV** | `(Wysokość, Szerokość, Kanały)` lub `(H, W, C)` | **BGR** | NumPy `ndarray` (`uint8`) |
+| **PyTorch (Torch Tensor)** | `(Kanały, Wysokość, Szerokość)` lub `(C, H, W)` | **RGB** (po standardowej konwersji) | Torch `Tensor` (`float32`) |
+
