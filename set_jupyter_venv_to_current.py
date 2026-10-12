@@ -32,7 +32,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--venv-path", help="Path to venv", default="venv")
-    parser.add_argument("--user", help="User name")
+    parser.add_argument("--user", help="User name", default="tombed")
 
     args = parser.parse_args()
 

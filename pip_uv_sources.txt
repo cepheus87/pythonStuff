@@ -1,0 +1,22 @@
+Komenda pokazuje gdzie pip szuka dodatkowych zrodel
+
+pip config -v list
+
+
+obecnie mam w /home/tombed/.config/pip/pip.conf
+
+[global]
+trusted-host = pypi.fitech.pl/repository/pypi-rho
+index = https://pypi.fitech.pl/repository/pypi-rho/pypi
+index-url = https://pypi.fitech.pl/repository/pypi-rho/simple
+extra-index-url = https://pypi.python.org/simple/
+
+
+uv nie wczytuje plikow pip.conf
+
+Jezeli potrzeba to nalezy globalnie w ~/.config/uv/uv.toml lub projekcie stworzyc plik uv.toml:
+
+[[index]]
+url="https://pypi.fitech.pl/repository/pypi-rho/simple"
+
+
