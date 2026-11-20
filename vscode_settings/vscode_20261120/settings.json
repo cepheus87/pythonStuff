@@ -1,0 +1,29 @@
+{
+    "macros": {
+    "cutToEndOfLine": [
+        "cursorEndSelect",
+        "editor.action.clipboardCutAction"
+    ]
+},
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 2000,
+"editor.wordWrap": "wordWrapColumn",
+"editor.wordWrapColumn": 120,
+"editor.rulers": [
+    120
+],
+"editor.lineHeight": 1.5,
+"git.untrackedChanges": "separate",
+"workbench.tree.indent": 16,
+"chat.tools.urls.autoApprove": {
+    "https://code.visualstudio.com": true,
+    "https://github.com/microsoft/vscode/wiki/*": true,
+    "https://docs.github.com": {
+        "approveRequest": false,
+        "approveResponse": true
+    }
+},
+"chat.viewSessions.orientation": "stacked",
+"workbench.editor.titleScrollbarSizing": "large"
+}
+

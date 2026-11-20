@@ -1,0 +1,5 @@
+To handle macros you need to install macros
+
+https://marketplace.visualstudio.com/items?itemName=geddski.macros
+
+(ctrl + shift + x)
